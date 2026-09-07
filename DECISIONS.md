@@ -14,8 +14,7 @@ Delete these instructions when you are done, or leave them. It does not matter.
 What you wanted at the start, and what is actually live now.
 Name one thing you dropped or added along the way, and why.
 
-*Your answer here.*
-
+I was not really set on a certain website, but just talked to Claude and decided on a professional website with headshot and resume. It seemed appropriate for a class project and I already have all of the files needed to make it (resume, headshot)
 ---
 
 ## 2. A fork in the road
@@ -42,8 +41,7 @@ If it genuinely never happened, say so plainly, and then say what you would have
 check in order to notice. Being honest here costs you far less than a story you cannot
 defend when you record your video.
 
-*Your answer here.*
-
+I had to make the agent keep trying to center my headshot, it kept saying that it was centered in the circle but clearly was not. I kept pushing and showing with screenshots that it was not centering image until the agent actually measured the pixels and got it close enough. 
 ---
 
 ## 4. How you know it works
