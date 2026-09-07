@@ -28,7 +28,7 @@ Say which you picked, what the alternative was, and what you gave up by not taki
 
 "There was no alternative" is not an answer. Find the fork.
 
-*Your answer here.*
+Claude asked me if I wanted a single or multiple page sites. It explained the pros and cons, and I picked a single page site due to it being easier to maintain and work on.
 
 ---
 

@@ -1,34 +1,288 @@
-/* A deliberately small starting point.
-   It exists to prove one thing: this file is loading.
-   If you can see spacing and a readable line length, the path in index.html works.
-
-   Delete all of it whenever you want. */
+/* ---- Foundations ---- */
 
 :root {
-  /* Makes the page follow the reader's light or dark mode setting, for free. */
   color-scheme: light dark;
+
+  /* One background, one text color, one accent. */
+  --color-bg: #faf9f6;
+  --color-text: #1c1c1e;
+  --color-text-muted: #55565c;
+  --color-accent: #2952a3;
+  --color-border: #dedad2;
+  --color-surface: #f1efe9;
+
+  /* Spacing scale of 8. */
+  --space-1: 0.5rem;   /* 8px */
+  --space-2: 1rem;      /* 16px */
+  --space-3: 1.5rem;    /* 24px */
+  --space-4: 2rem;      /* 32px */
+  --space-5: 3rem;      /* 48px */
+  --space-6: 4rem;       /* 64px */
+  --space-7: 6rem;       /* 96px */
+
+  /* Type scale. */
+  --text-sm: 0.9rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.375rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: clamp(2.75rem, 5vw + 1rem, 4.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #14151b;
+    --color-text: #ecebe6;
+    --color-text-muted: #a9a9ad;
+    --color-accent: #8fa9e8;
+    --color-border: #34353e;
+    --color-surface: #1c1d25;
+  }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-
-  /* 65ch caps the line at about 65 characters. Long lines are genuinely hard
-     to read, and this single rule does more for legibility than anything else
-     in this file. */
-  max-width: 65ch;
-
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
+  font-size: var(--text-base);
   line-height: 1.6;
-  font-size: 1.125rem;
+  margin: 0;
 }
 
-h1 {
-  font-size: 3rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
+.wrap {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+a:not(.button) {
+  text-underline-offset: 0.15em;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: var(--space-1) var(--space-2);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+}
+
+h1, h2, h3 {
+  line-height: 1.15;
+  margin: 0 0 var(--space-3) 0;
+}
+
+h2 {
+  font-size: var(--text-xl);
+  margin-top: var(--space-1);
+}
+
+h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-1);
 }
 
 p {
-  margin-bottom: 1.5rem;
+  margin: 0 0 var(--space-3) 0;
+}
+
+ul {
+  margin: 0 0 var(--space-3) 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: var(--space-1);
+}
+
+/* ---- Header ---- */
+
+.site-header {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header .wrap {
+  max-width: 50rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.site-name {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.site-header nav {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.site-header nav a:hover {
+  color: var(--color-accent);
+}
+
+/* ---- Sections ---- */
+
+main > section {
+  padding: var(--space-6) 0;
+}
+
+main > section + section {
+  border-top: 1px solid var(--color-border);
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-6);
+}
+
+.kicker {
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.hero h1 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-3);
+}
+
+.hero .lead {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 42ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+/* ---- Buttons ---- */
+
+.button {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button-quiet {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+/* ---- Projects ---- */
+
+.project + .project {
+  margin-top: var(--space-5);
+}
+
+.project-sub {
+  color: var(--color-text-muted);
+  font-weight: 400;
+  font-size: var(--text-base);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: 0;
+}
+
+/* ---- Resume ---- */
+
+.skills-list {
+  margin-bottom: var(--space-4);
+}
+
+.resume-entry {
+  margin-bottom: var(--space-3);
+}
+
+.resume-entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.resume-entry-head span {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* ---- Footer ---- */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-4) 0;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* ---- Small screens ---- */
+
+@media (max-width: 30rem) {
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header nav {
+    gap: var(--space-2);
+  }
 }

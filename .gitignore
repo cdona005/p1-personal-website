@@ -1,2 +1,6 @@
 .DS_Store
 Thumbs.db
+
+# Original resume has phone number/address - only the redacted copy in
+# assets/resume.pdf is meant to be public.
+data/

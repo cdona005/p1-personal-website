@@ -3,21 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello</title>
+  <title>Cody Donahue</title>
+  <meta name="description" content="Cody Donahue - full-stack developer, CS grad student, and U.S. Navy veteran.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Hello, world.</h1>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <p>
-    This page is live. That is the only thing it is here to prove.
-  </p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="#top">Cody Donahue</a>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <p>
-    Everything about it is yours to delete. Open Claude Code in this folder and
-    tell it what you actually want to build.
-  </p>
+  <main id="main">
+
+    <section id="top" class="hero wrap">
+      <p class="kicker">Software Engineer &nbsp;/&nbsp; U.S. Navy Veteran &nbsp;/&nbsp; CS Grad Student</p>
+      <h1>Cody Donahue</h1>
+      <p class="lead">
+        I build full-stack applications - backend, database, and frontend - and I got here
+        by way of eight years running quality assurance on nuclear propulsion systems in
+        the Navy. I'm currently finishing a Master's in Computer Science.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#projects">See my work</a>
+        <a class="button button-quiet" href="assets/resume.pdf">Download resume</a>
+      </div>
+    </section>
+
+    <section id="about" class="wrap">
+      <h2>About</h2>
+      <p>
+        I'm a graduate student pursuing a Master's in Computer Science, with a
+        Bachelor's in Computer Science from Old Dominion University. Before
+        software, I spent eight years in the U.S. Navy as a Nuclear Machinist
+        Mate and Quality Assurance Supervisor, leading and training technicians
+        in mission-critical environments where a missed step wasn't an
+        option.
+      </p>
+      <p>
+        That background is where my interest in backend systems and
+        reliability comes from: formal inspection, procedural compliance, and
+        root-cause troubleshooting translate surprisingly directly into
+        writing tests, reviewing code, and being the person who checks that
+        the thing actually works before calling it done.
+      </p>
+    </section>
+
+    <section id="projects" class="wrap">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3>EduSense <span class="project-sub">(Tempered-AI)</span></h3>
+        <p>
+          A platform that promotes intentional AI use among students and
+          educators, built for an ODU software engineering course. Instead of
+          handing over answers, it uses reflective prompts and challenge
+          modes that delay AI assistance until a student has engaged with the
+          problem themselves, plus usage analytics that let instructors see
+          how students are actually using it. It integrates with Canvas to
+          stay aware of academic context.
+        </p>
+        <p>
+          I built the full stack solo: a Django backend with REST API
+          endpoints, a SQLite database for user and session data, a React
+          frontend, and the input sanitization and model-handling logic
+          behind the "responsible AI use" behavior.
+        </p>
+        <p class="project-links">
+          <a href="https://odu-cs410-su25-emerald.github.io/Tempered-AI/">Live site &rarr;</a>
+          <a href="https://github.com/odu-cs410-su25-emerald/Tempered-AI">Source &rarr;</a>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>DupDetector</h3>
+        <p>
+          A Java command-line tool that finds near-duplicate code across
+          repositories using a custom tokenizer and hashing pipeline, with an
+          automated report generator built on top. I expanded JUnit coverage
+          and wired up GitHub Actions CI gates, and optimized the pipeline
+          for large codebases.
+        </p>
+      </article>
+    </section>
+
+    <section id="resume" class="wrap">
+      <h2>Resume</h2>
+      <p>
+        <a class="button" href="assets/resume.pdf">Download PDF</a>
+      </p>
+
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li><strong>Languages:</strong> Java, Python, SQL, C++, HTML/CSS, JavaScript/React</li>
+        <li><strong>Frameworks &amp; tools:</strong> Django, React, SQLite, Git, GitHub Actions, JUnit, Gradle</li>
+        <li><strong>Other:</strong> Linux systems, Agile/SAFe, technical documentation</li>
+      </ul>
+
+      <h3>Experience</h3>
+      <div class="resume-entry">
+        <div class="resume-entry-head">
+          <strong>U.S. Navy &ndash; Nuclear Machinist Mate / QA Supervisor</strong>
+          <span>Aug 2016 &ndash; May 2024</span>
+        </div>
+        <p>
+          Led and trained teams of technicians supporting nuclear propulsion
+          systems. Performed formal QA inspections and maintenance
+          verification, authored technical documentation, and enforced
+          safety and procedural standards in a mission-critical environment.
+        </p>
+      </div>
+
+      <h3>Education</h3>
+      <div class="resume-entry">
+        <div class="resume-entry-head">
+          <strong>M.S., Computer Science</strong>
+          <span>In progress</span>
+        </div>
+      </div>
+      <div class="resume-entry">
+        <div class="resume-entry-head">
+          <strong>B.S., Computer Science &ndash; Old Dominion University</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:cmd8592@gmail.com">cmd8592@gmail.com</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://github.com/cdona005">GitHub</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Built with Claude Code.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
