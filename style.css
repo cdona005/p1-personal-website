@@ -166,8 +166,47 @@ main > section + section {
 /* ---- Hero ---- */
 
 .hero {
+  max-width: 50rem;
   padding-top: var(--space-7);
   padding-bottom: var(--space-6);
+}
+
+.hero-grid {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.hero-photo {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media (min-width: 40rem) {
+  .hero-grid {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-photo {
+    width: 11rem;
+    height: 11rem;
+    order: 1;
+  }
+
+  .hero .lead {
+    margin-inline: 0;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
 }
 
 .kicker {
@@ -188,11 +227,13 @@ main > section + section {
   font-size: var(--text-lg);
   color: var(--color-text-muted);
   max-width: 42ch;
+  margin-inline: auto;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-2);
   margin-top: var(--space-4);
 }
@@ -222,8 +263,15 @@ main > section + section {
 
 /* ---- Projects ---- */
 
+.project {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: var(--space-4);
+}
+
 .project + .project {
-  margin-top: var(--space-5);
+  margin-top: var(--space-4);
 }
 
 .project-sub {
@@ -238,10 +286,36 @@ main > section + section {
   margin-bottom: 0;
 }
 
+/* ---- Cards ---- */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: var(--space-4);
+}
+
+.card ul:last-child,
+.card p:last-child,
+.project ul:last-child,
+.project p:last-child {
+  margin-bottom: 0;
+}
+
 /* ---- Resume ---- */
 
-.skills-list {
+h4 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 0 0 var(--space-1) 0;
+}
+
+.skill-group {
   margin-bottom: var(--space-4);
+}
+
+.skill-group ul {
+  margin-bottom: 0;
 }
 
 .resume-entry {
@@ -259,6 +333,12 @@ main > section + section {
 .resume-entry-head span {
   color: var(--color-text-muted);
   font-size: var(--text-sm);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
 }
 
 /* ---- Footer ---- */

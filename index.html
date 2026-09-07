@@ -26,16 +26,21 @@
   <main id="main">
 
     <section id="top" class="hero wrap">
-      <p class="kicker">Software Engineer &nbsp;/&nbsp; U.S. Navy Veteran &nbsp;/&nbsp; CS Grad Student</p>
-      <h1>Cody Donahue</h1>
-      <p class="lead">
-        I build full-stack applications - backend, database, and frontend - and I got here
-        by way of eight years running quality assurance on nuclear propulsion systems in
-        the Navy. I'm currently finishing a Master's in Computer Science.
-      </p>
-      <div class="hero-actions">
-        <a class="button" href="#projects">See my work</a>
-        <a class="button button-quiet" href="assets/resume.pdf">Download resume</a>
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Software Engineer &nbsp;/&nbsp; U.S. Navy Veteran &nbsp;/&nbsp; CS Grad Student</p>
+          <h1>Cody Donahue</h1>
+          <p class="lead">
+            I build full-stack applications - backend, database, and frontend - and I got here
+            by way of eight years running quality assurance on nuclear propulsion systems in
+            the Navy. I'm currently finishing a Master's in Computer Science.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#projects">See my work</a>
+            <a class="button button-quiet" href="assets/resume.pdf">Download resume</a>
+          </div>
+        </div>
+        <img class="hero-photo" src="assets/headshot.jpg" alt="Headshot of Cody Donahue" width="640" height="640">
       </div>
     </section>
 
@@ -99,28 +104,72 @@
     <section id="resume" class="wrap">
       <h2>Resume</h2>
       <p>
+        Software engineer and U.S. Navy veteran with hands-on experience across
+        backend services, SQL databases, and CI pipelines, applying secure
+        coding practices and structured documentation to keep systems
+        reliable. Holds a Secret security clearance.
+      </p>
+      <p>
         <a class="button" href="assets/resume.pdf">Download PDF</a>
       </p>
 
-      <h3>Skills</h3>
-      <ul class="skills-list">
-        <li><strong>Languages:</strong> Java, Python, SQL, C++, HTML/CSS, JavaScript/React</li>
-        <li><strong>Frameworks &amp; tools:</strong> Django, React, SQLite, Git, GitHub Actions, JUnit, Gradle</li>
-        <li><strong>Other:</strong> Linux systems, Agile/SAFe, technical documentation</li>
-      </ul>
+      <h3>Technical skills</h3>
+
+      <div class="skill-group">
+        <h4>Programming &amp; development</h4>
+        <ul>
+          <li>Backend services in Python and Java, building RESTful APIs and modular applications.</li>
+          <li>Object-oriented design for maintainable code across academic and personal projects.</li>
+          <li>SQL queries and relational database management for application data storage and reporting.</li>
+          <li>Frontend components in HTML, CSS, and React for responsive interfaces.</li>
+          <li>C++ and algorithmic problem-solving in data structures and systems coursework.</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Testing, CI/CD &amp; quality assurance</h4>
+        <ul>
+          <li>Expanded JUnit test coverage across multiple Java-based projects.</li>
+          <li>Automated CI pipelines with GitHub Actions to enforce testing gates and build integrity.</li>
+          <li>Documented codebases with JavaDoc and Markdown for maintainability and onboarding.</li>
+          <li>Gradle for build automation and dependency management.</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Systems, security &amp; Linux</h4>
+        <ul>
+          <li>Developed and tested applications across Windows, Unix, and macOS.</li>
+          <li>Linux systems knowledge for managing development environments and command-line workflows.</li>
+          <li>Input validation and responsible AI safeguards to protect application integrity.</li>
+          <li>Cybersecurity fundamentals applied to secure coding practices.</li>
+          <li>Structured configuration control with Git for version management.</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Agile &amp; software engineering practices</h4>
+        <ul>
+          <li>Agile and SAFe methodologies in academic team-based development projects.</li>
+          <li>Translated software requirements into functional designs and technical documentation.</li>
+          <li>Structured sprint planning and iterative development to deliver working increments.</li>
+          <li>Peer code reviews for quality, readability, and maintainability.</li>
+        </ul>
+      </div>
 
       <h3>Experience</h3>
-      <div class="resume-entry">
+      <div class="resume-entry card">
         <div class="resume-entry-head">
           <strong>U.S. Navy &ndash; Nuclear Machinist Mate / QA Supervisor</strong>
           <span>Aug 2016 &ndash; May 2024</span>
         </div>
-        <p>
-          Led and trained teams of technicians supporting nuclear propulsion
-          systems. Performed formal QA inspections and maintenance
-          verification, authored technical documentation, and enforced
-          safety and procedural standards in a mission-critical environment.
-        </p>
+        <ul>
+          <li>Led and trained teams of technicians in high-reliability environments supporting nuclear propulsion systems.</li>
+          <li>Performed formal QA inspections, maintenance verification, and procedural compliance.</li>
+          <li>Authored technical documentation and enforced safety and operational standards.</li>
+          <li>Coordinated maintenance planning and execution while supervising junior personnel.</li>
+          <li>Developed strong troubleshooting, root-cause analysis, and process-improvement skills.</li>
+        </ul>
       </div>
 
       <h3>Education</h3>
@@ -134,6 +183,10 @@
         <div class="resume-entry-head">
           <strong>B.S., Computer Science &ndash; Old Dominion University</strong>
         </div>
+        <p class="text-muted">
+          Software Engineering &middot; Data Structures &amp; Algorithms &middot; Linux Systems &middot;
+          Agile/SAFe &middot; Database Concepts &middot; Object-Oriented Design &middot; Cybersecurity Fundamentals
+        </p>
       </div>
     </section>
 
