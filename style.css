@@ -11,6 +11,10 @@
   --color-border: #dedad2;
   --color-surface: #f1efe9;
 
+  /* One sans for body/UI, one serif for headings. */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
   /* Spacing scale of 8. */
   --space-1: 0.5rem;   /* 8px */
   --space-2: 1rem;      /* 16px */
@@ -47,7 +51,7 @@
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: 1.6;
   margin: 0;
@@ -88,7 +92,9 @@ button:focus-visible {
   top: var(--space-2);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
   line-height: 1.15;
   margin: 0 0 var(--space-3) 0;
 }
