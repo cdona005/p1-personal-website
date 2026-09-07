@@ -1,6 +1,8 @@
 .DS_Store
 Thumbs.db
 
-# Original resume has phone number/address - only the redacted copy in
-# assets/resume.pdf is meant to be public.
-data/
+# Original resume/headshot have personal info (phone number, raw source
+# photo) - only the processed copies in assets/ are meant to be public.
+# Screenshots are tracked, everything else in data/ is not.
+data/*
+!data/screenshots/
